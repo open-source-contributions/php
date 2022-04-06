@@ -22,18 +22,18 @@ composer require ipinfo/ipinfo
 
 #### Quick Start
 
-```
->>>use ipinfo\ipinfo\IPinfo;
+```php
+require_once __DIR__ . '/vendor/autoload.php';
 
->>> $access_token = '123456789abc';
->>> $client = new IPinfo($access_token);
->>> $ip_address = '216.239.36.21';
->>> $details = $client->getDetails($ip_address);
+use ipinfo\ipinfo\IPinfo;
 
->>> $details->city;
-Emeryville
->>> $details->loc;
-37.8342,-122.2900
+$access_token = '123456789abc';
+$client = new IPinfo($access_token);
+$ip_address = '216.239.36.21';
+$details = $client->getDetails($ip_address);
+
+$details->city; // Emeryville
+$details->loc; // 37.8342,-122.2900
 ```
 
 ### Installation
